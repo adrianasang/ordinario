@@ -33,7 +33,7 @@ public class CRUD {
 	public void init() {
 		//URL="http://localhost:4200/";
 		URL="https://mern-crud.herokuapp.com/";
-		//System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		//options.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR,UnexpectedAlertBehaviour.IGNORE);
 		options.setBinary("/usr/bin/google-chrome-stable");
