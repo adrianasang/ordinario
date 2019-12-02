@@ -1,4 +1,4 @@
-/*
+
 package com.mayab.calidad.Funcionales;
 
 import org.junit.After;
@@ -28,6 +28,7 @@ public class CRUD {
 	private static WebDriver driver;
 	private static WebElement webElement;
 	
+	
 	@Before
 	public void init() {
 		//URL="http://localhost:4200/";
@@ -35,7 +36,9 @@ public class CRUD {
 		//System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		//options.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR,UnexpectedAlertBehaviour.IGNORE);
-		options.setBinary("/path/to/google-chrome-stable");
+		options.setBinary("/usr/bin/google-chrome-stable");
+		
+		// /usr/bin/google-chrome-stable /usr/share/man/man1/google-chrome-stable.1.gz
 		options.addArguments("--headless");
 		options.addArguments("--disable-gpu");	
 		DesiredCapabilities dc=new DesiredCapabilities();
@@ -240,4 +243,4 @@ public class CRUD {
 			e.printStackTrace();
 		}
 	}
-}*/
+}
