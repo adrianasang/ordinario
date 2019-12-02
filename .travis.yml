@@ -1,0 +1,19 @@
+language: java
+jdk: oraclejdk11
+sudo: enabled
+
+services:
+        - mysql
+before_install:
+        - mysql -e "CREATE DATABASE IF NOT EXISTS bdcalidad;"
+        - mysql -e "USE bdcalidad"
+        - mysql -e "DROP TABLE IF EXISTS `alumno`;
+                    CREATE TABLE `alumno` (
+                    `id_alumno` int(11) NOT NULL,
+                    `nombre` varchar(45) NOT NULL,
+                    `apellido` varchar(45) NOT NULL,
+                    `edad` int(11) NOT NULL,
+                    `promedio` float NOT NULL,
+                     PRIMARY KEY (`id_alumno`)
+                   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;"
+after_success: mysql -e "SHOW DATABASES;"
