@@ -3,9 +3,9 @@ package com.mayab.calidad.Funcionales;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
+
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
+
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -21,7 +21,7 @@ import static org.hamcrest.Matchers.equalTo;
 import org.openqa.selenium.Keys;
 
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
 public class CRUD {
 
 	private String URL="";
