@@ -5,10 +5,6 @@ sudo: enabled
 services:
         - mysql
 before_install:
-        - update user set authentication_string=PASSWORD("") where User='root';
-        - flush privileges;
-        - quit
-        - mysql
         - mysql -e "CREATE DATABASE IF NOT EXISTS bdcalidad;"
         - mysql -e "USE bdcalidad;"
         - mysql -e "DROP TABLE IF EXISTS bdcalidad.alumno;"
