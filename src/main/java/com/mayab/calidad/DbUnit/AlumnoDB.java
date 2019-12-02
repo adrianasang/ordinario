@@ -11,7 +11,7 @@ public class AlumnoDB implements AlumnoDAO{
 	String driver = "com.mysql.cj.jdbc.Driver";
 	String URL =  "jdbc:mysql://localhost:3306/bdcalidad"+"?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	String user="root";
-	String password="AdriSan";
+	String password="";
 	
 	
 	public void addAlumno(Alumno alumno) {
