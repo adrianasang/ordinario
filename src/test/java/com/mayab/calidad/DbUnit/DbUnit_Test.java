@@ -1,3 +1,4 @@
+/*
 package com.mayab.calidad.DbUnit;
 
 
@@ -97,7 +98,7 @@ public class DbUnit_Test extends DBTestCase{
 	     ITable expectedTable=dataSetEsperado.getTable("alumno");
 	   
 	     assertEquals(expectedTable, actualTable);		 
-	 }*/
+	 }
 	 
 	 @After
 	public void tearDown() throws Exception {
@@ -110,4 +111,5 @@ public class DbUnit_Test extends DBTestCase{
 			
 	}
 	
-}//End class
+}//End class  
+*/
