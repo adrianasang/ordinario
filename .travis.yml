@@ -5,8 +5,6 @@ sudo: enabled
 services:
         - mysql
 before_install:
-        - mysql -u root
-        - use mysql;
         - update user set authentication_string=PASSWORD("") where User='root';
         - flush privileges;
         - quit
