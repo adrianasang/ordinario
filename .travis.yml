@@ -6,6 +6,7 @@ services:
         - mysql
 before_install:
         - mysql -e "CREATE DATABASE IF NOT EXISTS bdcalidad;"
+        - mysql -e "USE bdcalidad;"
         - mysql -e "DROP TABLE IF EXISTS alumno;"
         - mysql -e "CREATE TABLE alumno(
                     id_alumno int(11) NOT NULL,
