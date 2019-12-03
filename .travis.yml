@@ -11,4 +11,3 @@ install:
         - sudo chmod +x /usr/local/share/chromedriver
         - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
         - sudo apt-get install libgconf-2-4
-        - chromedriver --whitelisted-ips

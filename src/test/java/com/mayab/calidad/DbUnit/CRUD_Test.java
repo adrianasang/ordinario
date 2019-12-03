@@ -30,8 +30,10 @@ public class CRUD_Test {
 		URL="https://mern-crud.herokuapp.com/";
 		System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless","--disable-gpu","--window-size=1920,1200","--ignore-certificate-errors");
-		options.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR,UnexpectedAlertBehaviour.IGNORE);
+		options.addArguments("--headless","--whitelisted-ips","--no-sandbox","--disable-extensions");
+		//options.addArguments("--headless","--disable-gpu","--window-size=1920,1200","--ignore-certificate-errors");
+
+		//options.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR,UnexpectedAlertBehaviour.IGNORE);
 		driver = new ChromeDriver(options);	
 	}
 	
