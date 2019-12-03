@@ -63,6 +63,11 @@ public class DbUnit_Test extends DBTestCase{
 		
 	}
 
+	@Test
+	public void testprueba() {
+		assertEquals(true,true);
+	}
+	/*
 	 @Test
 	 public void testAddAlumno() throws Exception{
 		 AlumnoDB DAO=new AlumnoDB();
