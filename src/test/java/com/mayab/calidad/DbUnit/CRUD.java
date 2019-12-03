@@ -1,5 +1,4 @@
-
-package com.mayab.calidad.Funcionales;
+package com.mayab.calidad.DbUnit;
 
 import org.junit.After;
 import org.junit.Before;
@@ -19,8 +18,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
 import org.openqa.selenium.Keys;
-
-
 
 public class CRUD {
 
