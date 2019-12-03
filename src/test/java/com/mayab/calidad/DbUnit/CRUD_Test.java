@@ -2,9 +2,9 @@ package com.mayab.calidad.DbUnit;
 
 import org.junit.After;
 import org.junit.Before;
-
+import org.junit.FixMethodOrder;
 import org.junit.Test;
-
+import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +19,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 import org.openqa.selenium.Keys;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CRUD_Test {
 
 	private String URL="";
