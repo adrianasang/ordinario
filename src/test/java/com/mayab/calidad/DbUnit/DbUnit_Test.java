@@ -42,7 +42,7 @@ public class DbUnit_Test extends DBTestCase{
 	String password="";
 	
 
-	
+	/*
 	public DbUnit_Test(String name) {
 		super(name);
 		System.setProperty(PropertiesBasedJdbcDatabaseTester.DBUNIT_DRIVER_CLASS, driver);
@@ -61,7 +61,7 @@ public class DbUnit_Test extends DBTestCase{
 			conn.close();
 		}
 		
-	}
+	}*/
 
 	@Test
 	public void testprueba() {
@@ -109,12 +109,14 @@ public class DbUnit_Test extends DBTestCase{
 	public void tearDown() throws Exception {
 		 
 	 }
+	 
+	 /*
 	 	
 	@Override
 	protected IDataSet getDataSet() throws Exception {
 			return new FlatXmlDataSetBuilder().build(new FileInputStream("./resources/empty.xml"));
 			
 	}
-	
+	*/
 }//End class  
 
