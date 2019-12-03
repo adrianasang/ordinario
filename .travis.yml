@@ -4,6 +4,7 @@ jdk: oraclejdk11
 addons:
         - chrome: stable
 install:
+        - google-chrome --version
         - wget -N https://chromedriver.storage.googleapis.com/2.46/chromedriver_linux64.zip -P ~/
         - unzip ~/chromedriver_linux64.zip -d ~/
         - rm ~/chromedriver_linux64.zip
