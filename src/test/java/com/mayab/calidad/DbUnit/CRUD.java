@@ -29,7 +29,7 @@ public class CRUD {
 	@Before
 	public void init() {
 		URL="https://mern-crud.herokuapp.com/";
-		System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+		//System.setProperty("webdriver.chrome.driver");
 		ChromeOptions options = new ChromeOptions();
 		options.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR,UnexpectedAlertBehaviour.IGNORE);
 		driver = new ChromeDriver(options);	
