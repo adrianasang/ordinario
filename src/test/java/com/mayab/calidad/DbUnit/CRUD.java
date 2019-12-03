@@ -63,7 +63,7 @@ public class CRUD {
 		pause(2000);
 		driver.close();
 	}
-	
+	/*
 	@Test
 	public void bCreateUserFail() { 
 		driver.get(URL);
@@ -209,7 +209,7 @@ public class CRUD {
 		assertThat("Arturo Lopez",equalTo(verifyUpdated)); 
 		pause(2000);
 		driver.close();
-	}
+	}*/
 	
 	
 	
