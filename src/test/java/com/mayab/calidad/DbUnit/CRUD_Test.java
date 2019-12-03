@@ -134,7 +134,7 @@ public class CRUD_Test {
 		String username="Tomas Catanzaritti";
 		String email="thomas@hotmail.com";
 		String age="22";
-			
+		
 		driver.findElement(By.xpath("/html/body/div/div/div[2]/button")).click(); 
 		webElement=driver.findElement(By.name("name"));
 		webElement.sendKeys(username);
@@ -160,56 +160,40 @@ public class CRUD_Test {
 	}
 	
 	@Test
-	public void eUpdateUserSuccess() { 
+	public void eUpdateUserSuccess() { //caso actualizar exitoso
 		driver.get(URL);		
-		String username="Arturo Lopez";
-		String email="arthur@hotmail.com";
-
-		driver.findElement(By.xpath("/html/body/div/div/div[2]/table/tbody/tr[1]/td[5]/button[1]")).click(); 	
-		webElement=driver.findElement(By.name("name")); 
-		webElement.clear();	
-		webElement.sendKeys(username);
-		webElement=driver.findElement(By.name("email"));
-		webElement.clear();	
-		webElement.sendKeys(email); 
+		//Modificar el usuario de Tomas Catanzaritti
 		
-		driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/button")).click(); 		
-		webElement.sendKeys(Keys.ESCAPE);
-		pause(2000);		
+		driver.findElement(By.xpath("/html/body/div/div/div[2]/table/tbody/tr[1]/td[5]/button[1]")).click(); //Button Update USer	
+		driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/div[3]/div[2]/div")).click(); //gender
+		driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/div[3]/div[2]/div/div[2]/div[2]")).click(); //Select M
+		driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/button")).click(); //Button save
 		
-		String verifyUpdated=driver.findElement(By.xpath("/html/body/div/div/div[2]/table/tbody/tr[1]/td[1]")).getText();		
+		pause(2000);
+		String verifyUpdated=driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/div[4]/div/div")).getText();
+		String msg="Nice one!";
 		System.out.println(verifyUpdated);
-		assertThat("Arturo Lopez",equalTo(verifyUpdated));
+		assertThat(msg,equalTo(verifyUpdated));
 		pause(2000);
 		driver.close();
 	}
-	
-	@Test
-	public void fUpdateUserFailed() {
-		driver.get(URL);		
-		String username="Gandalf the White";
-		String email="fly_you_fools@hotmail.com";
-		String age="1000"; 
 
-		driver.findElement(By.xpath("/html/body/div/div/div[2]/table/tbody/tr[1]/td[5]/button[1]")).click(); 	
-		webElement=driver.findElement(By.name("name")); 
-		webElement.clear();	
-		webElement.sendKeys(username); 
-		webElement=driver.findElement(By.name("email"));
-		webElement.clear();
-		webElement.sendKeys(email); 
-		webElement=driver.findElement(By.name("age"));
-		webElement.clear();	
-		webElement.sendKeys(age);
+	@Test
+	public void fUpdateUserFailed() { //caso actualizar fallido
+		driver.get(URL);
 		
-		driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/button")).click(); //Update	
+		driver.findElement(By.xpath("/html/body/div/div/div[2]/table/tbody/tr[1]/td[5]/button[1]")).click(); //Button Update USer
+		webElement=driver.findElement(By.name("name"));
+		driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/div[3]/div[2]/div")).click(); //gender
+		driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/div[3]/div[2]/div/div[2]/div[1]")).click(); //Select M
+		pause(2000);	
+		webElement.sendKeys(Keys.ESCAPE); //Retorna a la pagina de usuarios
+		System.out.println("esc pressed");		
 		pause(2000);
-		webElement.sendKeys(Keys.ESCAPE); 
-		pause(2000);			
-		
-		String verifyUpdated=driver.findElement(By.xpath("/html/body/div/div/div[2]/table/tbody/tr[1]/td[1]")).getText();		
+		String verifyUpdated=driver.findElement(By.xpath("/html/body/div/div/div[2]/table/tbody/tr[1]/td[4]")).getText();
+		String msg="f";
 		System.out.println(verifyUpdated);
-		assertThat("Arturo Lopez",equalTo(verifyUpdated)); 
+		assertThat(msg,equalTo(verifyUpdated));
 		pause(2000);
 		driver.close();
 	}
