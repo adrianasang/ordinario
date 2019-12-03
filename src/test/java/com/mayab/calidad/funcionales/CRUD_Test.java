@@ -1,4 +1,4 @@
-package com.mayab.calidad.DbUnit;
+package com.mayab.calidad.funcionales;
 
 import org.junit.After;
 import org.junit.Before;
