@@ -19,7 +19,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 import org.openqa.selenium.Keys;
 
-public class CRUD {
+public class CRUD_Test {
 
 	private String URL="";
 	private static WebDriver driver;
